@@ -3,15 +3,17 @@ class Dustbin{
         var options = {
             isStatic:true
         }
-        this.bottomBody = Bodies.rectangle(x, y, width, height, options);
+        this.bottomBody = Bodies.rectangle(x, y, this.width, this.height, options);
         this.leftBody = Bodies.rectangle(x, y, width, height, options);
         this.rightBody = Bodies.rectangle(x, y, width, height, options);
 
-        this.width = width;
-        this.height = height;
+        this.width = 200;
+        this.height = 20;
 
-        this.x=x
-    this.y=y
+        this.thickness = 200;
+
+        this.x=x;
+        this.y=y;
 
         World.add(world, this.bottomBody);
         World.add(world, this.leftBody);
@@ -37,8 +39,8 @@ class Dustbin{
 
         push();
 
-        translate(dustbinLeft.x, dustbinRight.position.y);
-
+        translate(dustbinLeft.x, dustbinRight.y);
+   
 
 
         rectMode(CENTER);

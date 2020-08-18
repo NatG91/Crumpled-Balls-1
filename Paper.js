@@ -6,7 +6,7 @@ class Paper{
 friction:0.5,
 density:1.2
     }
-    this.body = Bodies.circle(x,y,radius,options);
+   this.body = Bodies.circle(x,y,radius,options);
 
     this.radius = radius;
 
@@ -21,7 +21,7 @@ density:1.2
         rectMode(CENTER);
         strokeWeight(2);
         fill("Pink");
-        ellipse(200,200,this.radius, this.radius);
+        ellipse(0,0,this.radius, this.radius);
         pop();
       }
 }

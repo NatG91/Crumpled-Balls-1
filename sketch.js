@@ -13,14 +13,16 @@ function preload()
 }
 
 function setup() {
-	createCanvas(800, 700);
+	createCanvas(1600, 700);
 
 
 	engine = Engine.create();
 	world = engine.world;
 
 	//Create the Bodies Here.
-
+paperObject=new Paper(200,450,40)
+dustbinObject=new Dustbin()
+groundObject=new Ground(800,670,1600,20)
 
 	Engine.run(engine);
   
@@ -29,8 +31,12 @@ function setup() {
 function draw() {
   rectMode(CENTER);
   background(0);
-  
-  Matter.Bodies.circle(30,30, 10, [options], [maxSides])
+
+paperObject.display()
+dustbinObject.display()
+groundObject.display()
+
+
 
 
   drawSprites();

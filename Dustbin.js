@@ -33,7 +33,7 @@ class Dustbin{
         rectMode(CENTER);
         strokeWeight(2);
         fill("White");
-        rect(200,200,this.width, this.height);
+        rect(800,650,this.width, this.height);
 
         pop();
 
@@ -46,7 +46,7 @@ class Dustbin{
         rectMode(CENTER);
         strokeWeight(2);
         fill("White");
-        rect(200,200,this.width, this.height);
+        rect(700,600,this.width, this.height);
         pop();
 
         push();
@@ -58,7 +58,7 @@ class Dustbin{
         rectMode(CENTER);
         strokeWeight(2);
         fill("White");
-        rect(200,200,this.width, this.height);
+        rect(900,600,this.width, this.height);
         pop();
       }
 }

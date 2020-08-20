@@ -21,7 +21,7 @@ function setup() {
 
 	//Create the Bodies Here.
 paperObject=new Paper(200,450,40)
-dustbinObject=new Dustbin()
+dustbinObject=new Dustbin(1200,650)
 groundObject=new Ground(800,670,1600,20)
 
 	Engine.run(engine);
@@ -44,7 +44,7 @@ groundObject.display()
 }
 function keyPressed(){
     if (keyCode === UP_ARROW){
-        Matter.Body.applyForce(paperObject.body,paperObject.body.position,{x:85,y:-85});
+        Matter.Body.applyForce(paperObject.body,paperObject.body.position,{x:125,y:-125});
     }
 }
 

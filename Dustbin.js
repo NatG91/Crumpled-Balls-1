@@ -1,16 +1,16 @@
 class Dustbin{
-    constructor(x, y, width, height) {
+    constructor(x, y) {
         var options = {
             isStatic:true
         }
-        this.bottomBody = Bodies.rectangle(x, y, this.width, this.height, options);
-        this.leftBody = Bodies.rectangle(x, y, width, height, options);
-        this.rightBody = Bodies.rectangle(x, y, width, height, options);
+        this.bottomBody = Bodies.rectangle(x, y, this.width, this.thickness, options);
+        this.leftBody = Bodies.rectangle(x -100, y - 50,this.thickness,this.height, options);
+        this.rightBody = Bodies.rectangle(x + 100, y - 50, this.thickness,this.height, options);
 
         this.width = 200;
-        this.height = 20;
+        this.height = 100;
 
-        this.thickness = 200;
+        this.thickness = 20;
 
         this.x=x;
         this.y=y;
@@ -26,39 +26,39 @@ class Dustbin{
           var dustbinRight=this.rightBody.position
         push();
 
-        translate(dustbinBottom.x, dustbinBottom.y);
+      
 
 
 
         rectMode(CENTER);
-        strokeWeight(2);
+        stroke(255);
         fill("White");
-        rect(800,650,this.width, this.height);
+        rect(dustbinBottom.x,dustbinBottom.y,this.width, this.thickness);
 
         pop();
 
         push();
 
-        translate(dustbinLeft.x, dustbinRight.y);
+     
    
 
 
         rectMode(CENTER);
-        strokeWeight(2);
+        stroke(255);
         fill("White");
-        rect(700,600,this.width, this.height);
+        rect(dustbinLeft.x,dustbinLeft.y, this.thickness,this.height);
         pop();
 
         push();
 
-        translate(dustbinRight.x, dustbinRight.y);
+       
 
 
 
         rectMode(CENTER);
-        strokeWeight(2);
+        stroke(255);
         fill("White");
-        rect(900,600,this.width, this.height);
+        rect(dustbinRight.x,dustbinRight.y,this.thickness,this.height);
         pop();
       }
 }
